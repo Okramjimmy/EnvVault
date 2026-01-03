@@ -1,0 +1,24 @@
+{
+    "name": "vault-core",
+    "version": "0.1.0",
+    "main": "index.js",
+    "types": "index.d.ts",
+    "napi": {
+        "name": "vault-core",
+        "triples": {
+            "defaults": true,
+            "additional": []
+        }
+    },
+    "scripts": {
+        "artifacts": "napi artifacts",
+        "build": "napi build --platform --release",
+        "build:debug": "napi build --platform",
+        "prepublishOnly": "napi prepublish -t npm",
+        "test": "cargo test",
+        "universal": "napi universal -t darwin-universal"
+    },
+    "devDependencies": {
+        "@napi-rs/cli": "^3.0.0-alpha.64"
+    }
+}

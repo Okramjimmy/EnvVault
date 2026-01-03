@@ -1,0 +1,23 @@
+[package]
+name = "vault-core"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+napi = { version = "2", features = ["full"] }
+napi-derive = "2"
+rusqlite = { version = "0.32", features = ["bundled"] }
+ring = "0.17"
+base64 = "0.22"
+directories = "5"
+dirs = "5"
+
+[build-dependencies]
+napi-build = "2"
+
+[profile.release]
+lto = true
+opt-level = 3

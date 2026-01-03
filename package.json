@@ -1,0 +1,57 @@
+{
+  "name": "envvault",
+  "version": "1.0.0",
+  "description": "Secure environment variable manager with Spotlight UI",
+  "main": "dist/main/index.js",
+  "scripts": {
+    "dev": "electron-vite dev",
+    "build": "electron-vite build",
+    "preview": "electron-vite preview",
+    "build:rust": "cd vault-core && npm run build",
+    "dev:full": "npm run build:rust && npm run dev",
+    "build:mac": "electron-vite build && electron-builder --mac"
+  },
+  "build": {
+    "appId": "com.envvault.app",
+    "productName": "EnvVault",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "package.json"
+    ],
+    "extraResources": [
+      "vault-core/**/*",
+      "resources/**/*"
+    ],
+    "mac": {
+      "target": "dmg",
+      "icon": "resources/icon-512.png",
+      "category": "public.app-category.developer-tools"
+    }
+  },
+  "keywords": [
+    "electron",
+    "rust",
+    "env",
+    "vault",
+    "security"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.2",
+    "electron": "^39.2.7",
+    "electron-builder": "^26.0.12",
+    "electron-vite": "^5.0.0",
+    "sharp": "^0.34.5",
+    "typescript": "^5.9.3"
+  }
+}
