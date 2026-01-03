@@ -11,6 +11,10 @@ EnvVault is a secure, developer-friendly environment variable manager. It featur
 - 📱 **Menu Bar App**: Runs quietly in the background, accessible via menu bar icon.
 - 🦀 **Native Performance**: Core logic written in Rust for speed and safety.
 
+## 📥 Downloads
+
+Download the latest version from the [Releases Page](https://github.com/Okramjimmy/EnvVault/releases).
+
 ## Installation
 
 ### Prerequisites
@@ -21,7 +25,7 @@ EnvVault is a secure, developer-friendly environment variable manager. It featur
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/Okramjimmy/EnvVault.git
    cd EnvVault
    ```
 
